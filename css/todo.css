@@ -1,0 +1,125 @@
+*{
+    margin: 0;
+    padding: 0;
+  }
+
+main {
+    background: white;
+    width: 90%;
+    margin: auto;
+    padding: 10px;
+    margin-top: 10px;
+}
+
+
+.flex-container {
+    display: flex;
+    align-items: stretch;
+    flex-direction: row;
+    font-size: 10pt;
+}
+
+.flex-container>div {
+    width: 100px;
+    margin: 10px;
+    text-align: justify-left;
+
+}
+
+.flex-container>textarea {
+    background-color: #f1f1f1;
+    text-align: justify-left;
+
+}
+
+.t1{
+    font-weight: 700;
+  
+    
+}
+
+header {
+    padding: 10px 0 0 0;
+    background-color: black;
+
+}
+
+header>p {
+
+    color: rgb(139, 141, 131);
+    text-indent: 20px;
+    font-size: 16px;
+}
+
+.gray {
+    background: rgb(219, 216, 216);
+    font-weight: 700;
+    text-indent: 10px;
+    line-height: 25px;
+
+}
+
+.addbox {
+    border: 1px solid gray;
+}
+
+.addbox>form {
+    padding: 10px;
+}
+
+.todobox {
+    border: 1px solid gray;
+   
+}
+
+.todoitemb {
+   
+    padding: 10px ;
+    background: #337ab7;
+    color: white;
+    font-size: 9pt;
+    line-height: 11pt;
+    font-family: Arial, Helvetica, sans-serif;
+
+}
+
+.todoitemw {
+   
+    padding: 10px ;
+    background: #white;
+    color: black;
+    font-size: 9pt;
+    line-height: 11pt;
+    font-family: Arial, Helvetica, sans-serif;
+
+}
+
+.todoitem p{
+    line-height: 11px;
+    font-size: 9px;
+    font-family: Arial, Helvetica, sans-serif;
+    
+}
+
+.todoitemw  .todotitle {
+    font-weight: 800;
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 0 0 5px;
+    color: black;
+  }
+
+
+  .todoitemb  .todotitle {
+    font-weight: 800;
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 0 0 5px;
+    color: white;
+  }
+
+  .contents{
+      margin-left: 1rem;
+  }
+
+  .contents ul{
+    margin-left: 1rem;
+}

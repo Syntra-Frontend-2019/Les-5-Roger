@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>Todo list</title>
+
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/todo.css">
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+
+<body>
+
+    <header class="flex-container">
+        <p>To-Do App</p>
+    </header>
+    <div class="flex-container">
+        <div class="addbox" style="flex-grow: 4">
+           
+                <p class="gray">Add a To-Do</p>
+                    <div class="contents">
+                        <p class="t1">Title</p>
+                        <p><input width="100%" type="text" id="titel" name="titel" ></p>
+                        <p class="t1">Todo</p>
+                        <p><textarea id="todo"  width="100%" rows="6" name="todo"></textarea></p>
+                        <p><button onclick="voegtoe()" id="tooninhoud">Toevoegen</button></p>
+                        <ul class="list"></ul>
+                     </div>
+               
+				
+          
+           
+        </div>
+
+       
+    </div>
+
+   
+    <script>
+    var titel = document.querySelector("#titel");
+    var todo = document.querySelector("#todo");
+    var list = document.querySelector(".list");
+    var todolist=[];
+       
+  function voegtoe()
+  {
+            var todo_object= 
+        {
+
+            title: titel.value, 
+            todo: todo.value,
+        }
+            todolist.push(todo_object);
+            
+            var html= "";
+            for (var i=0; i<todolist.length; i++)
+            {
+                html += "<li> <b>" + todolist[i].title + "</b>" + " " + todolist[i].todo + "</li>";
+            }
+            list.innerHTML= html;
+            console.log(todolist);
+            console.log(todolist.length)
+    }
+</script>
+
+
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/bootstrap.min.js"></script>
+</body>
